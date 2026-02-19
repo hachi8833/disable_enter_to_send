@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Disable Enter to Send",
+  "version": "1.0.0",
+  "description": "ChatGPT・Claude.ai でReturnキーによるメッセージ送信を無効化します。送信は送信ボタンで行います。",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
